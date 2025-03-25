@@ -318,16 +318,16 @@ ZMK_BEHAVIOR(swift_arrow, macro,
 
 // MARK: Layers
 
-ZMK_BASE_LAYER(base,
+ZMK_LAYER(base,
     &kp F1      &kp F2            &kp F3         &kp F4         &kp F5                                                                                                                                                    &kp F6        &kp F7        &kp F8       &kp F9        &kp F10
     &trans      &kp N1            &kp N2         &kp N3         &kp N4        &kp N5                                                                                                                             &kp N6   &kp N7        &kp N8        &kp N9       &kp N0        &kp PLUS
     &trans      &kp Q             &kp W          &kp F          &kp P         &kp G                                                                                                                              &kp J    &kp L         &kp U         &kp Y        &kp SEMI      &kp MINUS
     &kp ENTER   &hml LCTRL A      &hml LALT R    &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                              &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I  &hmr LCTRL O  &kp SQT
-    MAGIC_SHIFT &kp Z             &kp X          &kp C          &kp V         &kp B   &kp_BASE ESC                   &trans                         MAGIC_SHIFT  MAGIC_SHIFT  SMART_NUM   &kp ENTER                   &kp K    &kp M         &comma_morph  &dot_morph   &kp FSLH      MAGIC_SHIFT
+    &trans &kp Z             &kp X          &kp C          &kp V         &kp B   &kp ESC                   &trans                         &trans  &trans  &trans   &kp ENTER                   &kp K    &kp M         &trans  &trans   &kp FSLH      &trans
     &mo System  &kp LG(LA(BSLH))  &kp LA(SPACE)  &kp LEFT       &kp RIGHT             &thumb_layer Coding BSPC  &thumb_layer Navigation DEL    &trans       &trans       &kp TAB     &thumb_layer Symbols SPACE           &kp UP        &kp DOWN      &kp LBKT     &kp RBKT      &kp GRAVE
 )
 
-ZMK_BASE_LAYER(symbols,
+ZMK_LAYER(symbols,
     &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                             &none  &none  &none  &none  &none
     &trans        &trans        &trans      &trans      &trans     &kp PIPE                                                                           &none  &none  &none  &none  &none  &none
     &trans        &kp CARET     &kp AMPS    &kp STAR    &kp PLUS   &kp BSLH                                                                           &none  &none  &none  &none  &none  &none
@@ -336,7 +336,7 @@ ZMK_BASE_LAYER(symbols,
     &none         &kp CAPS      &kp INS     &kp LT      &kp GT                &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &trans  &trans  &trans  &trans           &none  &none  &none  &none  &none
 )
 
-ZMK_BASE_LAYER(coding,
+ZMK_LAYER(coding,
     &none  &none  &none  &none  &none                                                                                              &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &trans  &trans
     &none  &none  &none  &none  &none  &none                                                                        &kp LG(LC(R))  &trans         &trans        &trans        &trans  &trans
     &none  &none  &none  &none  &none  &none                                                                        &kp LC(N5)     &kp LC(N6)     &kp LPAR      &kp RPAR      &trans  &trans
@@ -345,7 +345,7 @@ ZMK_BASE_LAYER(coding,
     &none  &none  &none  &none  &none         &trans  &trans  &trans  &trans  &trans            &trans                             &swift_si      &swift_arrow  &trans        &trans  &trans
 )
 
-ZMK_BASE_LAYER(system,
+ZMK_LAYER(system,
     &bt BT_CLR    &none            &none            &none            &none                                                                                           &none   &none   &none   &none  &bt BT_CLR_ALL
     &none         &none            &none            &none            &none            &none                                                                  &none   &none   &none   &none   &none  &none
     &none         &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                        &none   &none   &none   &none   &none  &none
@@ -354,7 +354,7 @@ ZMK_BASE_LAYER(system,
     &none         &none            &none            &none            &none                             &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none  &to 4
 )
 
-ZMK_BASE_LAYER(numbers,
+ZMK_LAYER(numbers,
     &none   &none   &none   &none   &none                                                                          &none   &none      &none    &none  &none
     &none   &none   &none   &none   &none   &kp CARET                                                       &none  &none   &none      &none    &none  &none
     &none   &none   &kp N7  &kp N8  &kp N9  &kp PRCNT                                                       &none  &none   &none      &none    &none  &none
@@ -363,7 +363,7 @@ ZMK_BASE_LAYER(numbers,
     &none   &none   &none   &none   &none               &kp BSPC &trans  &trans &trans  CANCEL   &trans            &none   &none      &none    &none  &none
 )
 
-ZMK_BASE_LAYER(navigation,
+ZMK_LAYER(navigation,
     &none   &none   &none   &none  &none                                                                  &none         &none         &none     &none    &none
     &none   &none   &none   &none  &none  &none                                             &none         &none         &none         &none     &none    &none
     &none   &none   &none   &none  &none  &none                                             &none         &kp LS(TAB)   &swapper      &none     &none    &none
