@@ -144,7 +144,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word Numbers>, <&sl Numbers>;
 /* Custom behaviors */
 
 // Alt+Tab swapper, requires tri-state module.
-ZMK_TRI_STATE(swapper, bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+ZMK_TRI_STATE(swapper, bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
               ignored-key-positions = <LT2 RT2 RM1 RM2 RM3>;)
 
 // Define mod-morph with a *single* mod trigger for less repetition.
@@ -191,7 +191,7 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 #define DSK_NEXT  &hmr LALT LG(LC(RIGHT)) // Next     desktop.
 #define PIN_WIN   &kp LG(LC(LS(Q)))       // Pin window across desktops.
 #define PIN_APP   &kp LG(LC(LS(A)))       // Pin application across desktops.
-#define DSK_MGR   &kp LA(GRAVE)           // Desktop manager.
+#define DSK_MGR   &kp LG(GRAVE)           // Desktop manager.
 #define VOL_DOWN  &hmr RSHFT C_VOL_DN
 
 /* Keymap */
@@ -321,9 +321,9 @@ ZMK_BEHAVIOR(swift_arrow, macro,
 ZMK_LAYER(base,
     &kp F1      &kp F2            &kp F3         &kp F4         &kp F5                                                                                                                                                    &kp F6        &kp F7        &kp F8       &kp F9        &kp F10
     &swapper    &kp N1            &kp N2         &kp N3         &kp N4        &kp N5                                                                                                                             &kp N6   &kp N7        &kp N8        &kp N9       &kp N0        &kp PLUS
-    DSK_MGR     &kp Q             &kp W          &kp F          &kp P         &kp G                                                                                                                              &kp J    &kp L         &kp U         &kp Y        &kp SEMI      &kp MINUS
-    &kp ENTER   &hml LCTRL A      &hml LALT R    &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                              &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I  &hmr LCTRL O  &kp SQT
-    MAGIC_SHIFT &kp Z             &kp X          &kp C          &kp V         &kp B   &kp ESC                   &kp K_APP                      MAGIC_SHIFT  MAGIC_SHIFT  &kp TAB     &kp ENTER                   &kp K    &kp M         &comma_morph  &dot_morph   &kp FSLH      MAGIC_SHIFT
+    CANCEL      &kp Q             &kp W          &kp F          &kp P         &kp G                                                                                                                              &kp J    &kp L         &kp U         &kp Y        &kp SEMI      &kp MINUS
+    &kp ESC     &hml LCTRL A      &hml LALT R    &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                              &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I  &hmr LCTRL O  &kp SQT
+    MAGIC_SHIFT &kp Z             &kp X          &kp C          &kp V         &kp B   MAGIC_SHIFT               &kp K_APP                      CANCEL       CANCEL       &kp TAB     &kp ENTER                   &kp K    &kp M         &comma_morph  &dot_morph   &kp FSLH      MAGIC_SHIFT
     &mo System  &kp LG(LA(BSLH))  &kp LA(SPACE)  &kp LEFT       &kp RIGHT             &thumb_layer Coding BSPC  &thumb_layer Navigation ENTER  DSK_MGR      SMART_NUM    &swapper    &thumb_layer Symbols SPACE           &kp UP        &kp DOWN      &kp LBKT     &kp RBKT      &kp GRAVE
 )
 
