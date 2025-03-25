@@ -320,7 +320,7 @@ ZMK_BEHAVIOR(swift_arrow, macro,
 
 ZMK_LAYER(base,
     &kp F1      &kp F2            &kp F3         &kp F4         &kp F5                                                                                                                                                    &kp F6        &kp F7        &kp F8       &kp F9        &kp F10
-    DSK_MGR     &kp N1            &kp N2         &kp N3         &kp N4        &kp N5                                                                                                                             &kp N6   &kp N7        &kp N8        &kp N9       &kp N0        &kp PLUS
+    &trans      &kp N1            &kp N2         &kp N3         &kp N4        &kp N5                                                                                                                             &kp N6   &kp N7        &kp N8        &kp N9       &kp N0        &kp PLUS
     CANCEL      &kp Q             &kp W          &kp F          &kp P         &kp G                                                                                                                              &kp J    &kp L         &kp U         &kp Y        &kp SEMI      &kp MINUS
     &kp ENTER   &hml LCTRL A      &hml LALT R    &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                              &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I  &hmr LCTRL O  &kp SQT
     MAGIC_SHIFT &kp Z             &kp X          &kp C          &kp V         &kp B   &kp ESC                   &kp K_APP                      MAGIC_SHIFT  MAGIC_SHIFT  SMART_NUM   &kp ENTER                   &kp K    &kp M         &comma_morph  &dot_morph   &kp FSLH      MAGIC_SHIFT
