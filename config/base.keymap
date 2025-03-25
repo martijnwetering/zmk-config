@@ -128,11 +128,11 @@ ZMK_ADAPTIVE_KEY(
 };
 
 // Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
-// #define SMART_NUM &smart_num NUM 0
-// ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
-//              tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
-// ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
-//               tapping-term-ms = <200>;)
+#define SMART_NUM &smart_num NUM 0
+ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
+             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_TAP_DANCE(num_dance, bindings = <&num_word Numbers>, <&sl Numbers>;
+              tapping-term-ms = <200>;)
 
 // Smart-mouse, requires tri-state module.
 // ZMK_TRI_STATE(
@@ -196,7 +196,7 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
+// ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
@@ -323,7 +323,7 @@ ZMK_LAYER(base,
     DSK_MGR     &kp N1            &kp N2         &kp N3         &kp N4        &kp N5                                                                                                                             &kp N6   &kp N7        &kp N8        &kp N9       &kp N0        &kp PLUS
     CANCEL      &kp Q             &kp W          &kp F          &kp P         &kp G                                                                                                                              &kp J    &kp L         &kp U         &kp Y        &kp SEMI      &kp MINUS
     &kp ENTER   &hml LCTRL A      &hml LALT R    &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                              &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I  &hmr LCTRL O  &kp SQT
-    MAGIC_SHIFT &kp Z             &kp X          &kp C          &kp V         &kp B   &kp ESC                   &kp K_APP                      MAGIC_SHIFT  MAGIC_SHIFT  &trans      &kp ENTER                   &kp K    &kp M         &comma_morph  &dot_morph   &kp FSLH      MAGIC_SHIFT
+    MAGIC_SHIFT &kp Z             &kp X          &kp C          &kp V         &kp B   &kp ESC                   &kp K_APP                      MAGIC_SHIFT  MAGIC_SHIFT  SMART_NUM   &kp ENTER                   &kp K    &kp M         &comma_morph  &dot_morph   &kp FSLH      MAGIC_SHIFT
     &mo System  &kp LG(LA(BSLH))  &kp LA(SPACE)  &kp LEFT       &kp RIGHT             &thumb_layer Coding BSPC  &thumb_layer Navigation DEL    &trans       CANCEL       &kp TAB     &thumb_layer Symbols SPACE           &kp UP        &kp DOWN      &kp LBKT     &kp RBKT      &kp GRAVE
 )
 
