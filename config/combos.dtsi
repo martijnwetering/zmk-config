@@ -25,6 +25,10 @@
 ZMK_COMBO(esc, &kp ESC, LT2 LT3, ALL, COMBO_TERM_FAST)
 ZMK_COMBO(tab, &kp TAB, RT2 RT3, ALL, COMBO_TERM_FAST)
 
+/* Horizontal combos - right hand */
+ZMK_COMBO(bspc,  &kp BSPC,     RT2 RT3,     ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(del,   &kp DEL,      RT1 RT2,     ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 // ZMK_COMBO(cut,   &kp LC(X),     LB3 LB1,     ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(copy,  &kp LC(INS),   LB3 LB2,     ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(paste, &kp LS(INS),   LB2 LB1,     ALL, COMBO_TERM_FAST)
