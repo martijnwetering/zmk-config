@@ -324,7 +324,7 @@ ZMK_LAYER(base,
     &kp ESC     &kp Q             &kp W          &kp F          &kp P         &kp G                                                                                                                              &kp J    &kp L         &kp U         &kp Y        &kp SEMI      &kp MINUS
     &kp BSPC    &hml LCTRL A      &hml LALT R    &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                              &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I  &hmr LCTRL O  &kp SQT
     MAGIC_SHIFT &kp Z             &kp X          &kp C          &kp V         &kp B   &kp ESC                   &kp K_APPLICATION              CANCEL       CANCEL       SMART_NUM   &kp TAB                     &kp K    &kp M         &comma_morph  &dot_morph   &kp FSLH      MAGIC_SHIFT
-    &mo System  &kp LG(LA(BSLH))  &kp LA(SPACE)  &kp LEFT       &kp RIGHT             &thumb_layer Coding BSPC  &thumb_layer Navigation DEL    DSK_MGR      &swapper     &kp ENTER   &thumb_layer Symbols SPACE           &kp UP        &kp DOWN      &kp ENTER    &kp BSPC      &kp GRAVE
+    &mo System  &kp LG(LA(BSLH))  &kp BSPC       &kp LEFT       &kp RIGHT             &thumb_layer Coding BSPC  &thumb_layer Navigation DEL    DSK_MGR      &swapper     &kp ENTER   &thumb_layer Symbols SPACE           &kp UP        &kp DOWN      &kp ENTER    &kp BSPC      &kp GRAVE
 )
 
 ZMK_LAYER(symbols,
