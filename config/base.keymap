@@ -321,21 +321,21 @@ ZMK_BEHAVIOR(swift_arrow, macro,
 // MARK: Layers
 
 ZMK_LAYER(base,
-    &kp F1      &kp F2            &kp F3                &kp F4         &kp F5                                                                                                                                               &kp F6        &kp F7        &kp PIPE            &kp MINUS     &kp PLUS
-    &kp LBRC    &kp N1            &kp N2                &kp N3         &kp N4        &kp N5                                                                                                                        &kp N6   &kp N7        &kp N8        &kp N9              &kp N0        &kp LBKT
-    &kp RBRC    &kp Q             &hml LG(LCTRL) W      &hml LCTRL F   &kp P         &kp G                                                                                                                         &kp J    &kp L         &hmr LCTRL U  &hmr LG(LCTRL) Y    &kp SEMI      &kp RBKT
-    &kp TAB     &hml LCTRL A      &hml LALT R           &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                         &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I         &hmr LCTRL O  &kp SQT
-    MAGIC_SHIFT &kp Z             &kp X                 &kp C          &kp V         &kp B   &kp SPACE   &kp LC(GRAVE)                  &swift_arrow   &kp TAB      CANCEL      SMART_NUM                          &kp K    &kp M         &comma_morph  &dot_morph          &kp FSLH      MAGIC_SHIFT
-    &mo System  &kp LG(LA(BSLH))  &sl Coding            &kp LEFT       &kp RIGHT             &kp BSPC    &thumb_layer Navigation ESC    DSK_MGR        &kp DEL      &kp ENTER   &thumb_layer Symbols SPACE                  &kp UP        &kp DOWN      &kp ENTER           &kp BSLH      &kp GRAVE
+    &kp F1      &kp F2            &kp F3                &kp F4         &kp F5                                                                                                                                                     &kp F6        &kp F7        &kp PIPE            &kp MINUS     &kp PLUS
+    &kp LBRC    &kp N1            &kp N2                &kp N3         &kp N4        &kp N5                                                                                                                              &kp N6   &kp N7        &kp N8        &kp N9              &kp N0        &kp LBKT
+    &kp RBRC    &kp Q             &hml LG(LCTRL) W      &hml LCTRL F   &kp P         &kp G                                                                                                                               &kp J    &kp L         &hmr LCTRL U  &hmr LG(LCTRL) Y    &kp SEMI      &kp RBKT
+    &kp TAB     &hml LCTRL A      &hml LALT R           &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                               &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I         &hmr LCTRL O  &kp SQT
+    MAGIC_SHIFT &kp Z             &kp X                 &kp C          &kp V         &kp B   &tog Navigation   &kp LC(GRAVE)                  &swift_arrow   &kp TAB      CANCEL      SMART_NUM                          &kp K    &kp M         &comma_morph  &dot_morph          &kp FSLH      MAGIC_SHIFT
+    &mo System  &kp LG(LA(BSLH))  &sl Coding            &kp LEFT       &kp RIGHT             &kp BSPC          &thumb_layer Navigation ESC    DSK_MGR        &kp SPACE    &kp ENTER   &thumb_layer Symbols SPACE                  &kp UP        &kp DOWN      &kp ENTER           &kp BSLH      &kp GRAVE
 )
 
 ZMK_LAYER(symbols,
     &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                             &none  &none  &none  &none  &none
-    &trans        &trans        &trans      &trans      &trans     &kp PIPE                                                                           &none  &none  &none  &none  &none  &none
-    &trans        &kp CARET     &kp AMPS    &kp STAR    &kp PLUS   &kp BSLH                                                                           &none  &none  &none  &none  &none  &none
-    &trans        &kp GRAVE     &kp DLLR    &kp PRCNT   &kp EQUAL  &kp MINUS                                                                          &none  &none  &none  &none  &none  &none
-    &trans        &kp TILDE     &kp EXCL    &kp AT      &kp HASH   &kp UNDER  &kp LG(LS(J))      &kp LG(LC(J))      &trans  &trans  &trans  &trans    &none  &none  &none  &none  &none  &none
-    &none         &kp CAPS      &kp INS     &kp LT      &kp GT                &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &trans  &trans  &trans  &trans           &none  &none  &none  &none  &none
+    &trans        &trans        &trans      &trans      &trans     &none                                                                              &none  &none  &none  &none  &none  &none
+    &trans        &kp LBRC      &kp AMPS    &kp STAR    &kp CARET  &kp RBRC                                                                           &none  &none  &none  &none  &none  &none
+    &trans        &kp GRAVE     &kp DLLR    &kp PRCNT   &kp EQUAL  &kp PLUS                                                                           &none  &none  &none  &none  &none  &none
+    &trans        &kp TILDE     &kp EXCL    &kp AT      &kp HASH   &kp PIPE   &kp LG(LS(J))      &kp LG(LC(J))      &trans  &trans  &trans  &trans    &none  &none  &none  &none  &none  &none
+    &none         &kp CARET     &kp INS     &kp LT      &kp GT                &kp LPAR           &kp RPAR           &trans  &trans  &trans  &trans           &none  &none  &none  &none  &none
 )
 
 ZMK_LAYER(coding,
@@ -357,21 +357,21 @@ ZMK_LAYER(system,
 )
 
 ZMK_LAYER(numbers,
-    &none   &none   &none   &none   &none                                                                          &none   &none      &none    &none  &none
-    &none   &none   &none   &none   &none   &kp CARET                                                       &none  &none   &none      &none    &none  &none
-    &none   &none   &kp N7  &kp N8  &kp N9  &kp PRCNT                                                       &none  &none   &none      &none    &none  &none
-    &none   &kp N0  &kp N4  &kp N5  &kp N6  &kp PLUS                                                        &none  &none   &none      &none    &none  &none
-    &none   &none   &kp N1  &kp N2  &kp N3  &kp STAR    &kp LT   &kp GT  &none  &trans  &trans   &trans     &none  &none   &kp COMMA  &kp DOT  &none  &none
-    &none   &none   &none   &none   &none               &kp BSPC &trans  &trans &trans  CANCEL   &trans            &none   &none      &none    &none  &none
+    &none   &none      &none   &none   &none                                                                                 &none       &none        &none      &none     &none
+    &none   &none      &none   &none   &none   &none                                                                  &none  &none       &none        &none      &none     &none
+    &none   &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT                                                               &none  &none       &none        &none      &none     &none
+    &none   &kp SEMI   &kp N4  &kp N5  &kp N6  &kp EQUAL                                                              &none  &kp LSHFT   &kp LGUI     &kp LALT   &kp LCTRL &none
+    &none   &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH    &kp LT   &kp GT  &none         &trans  &trans   &trans     &none  &none       &none        &none      &none     &none
+    &none   &none      &none   &none   &none               &kp DOT  &kp N0  &kp MINUS     &trans  CANCEL   &kp BSPC          &none       &none        &none      &none     &none
 )
 
 ZMK_LAYER(navigation,
-    &none   &none   &none   &none  &none                                                                  &none         &none         &none     &none    &none
-    &none   &none   &none   &none  &none  &none                                             &none         &none         &none         &none     &none    &none
-    &none   &none   &none   &none  &none  &none                                             &none         &kp LS(TAB)   &swapper      &none     &none    &none
-    &none   &none   &none   &none  &none  &none                                             &select_none  &extend_line  &extend_word  U_WH_U    U_WH_L   &none
-    &none   &none   &none   &none  &none  &none   &none  &none  &none  &none  &none  &none  &kp LG(A)     &select_line  &select_word  U_WH_D    U_WH_R   &none
-    &none   &none   &none   &none  &none          &none  &none  &none  &none  &none  &none                &kp PG_UP     &kp PG_DN     &kp HOME  &kp END  &none
+    &none      &none       &none       &none      &none                                                                                  &none         &none         &none       &none      &none
+    &none      &none       &none       &none      &none      &none                                                         &none         &none         &none         &none       &none      &none
+    &none      &none       &none       &none      &none      &none                                                         &none         &none         &none         &none       &none      &none
+    &none      &kp LCTRL   &kp LALT    &kp LGUI   &kp LSHFT  &none                                                         &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT   &none      &none
+    &none      &none       &none       &none      &none      &none   &tog Navigation    &none  &none  &none  &none  &none  &kp HOME      &kp PG_DN     &kp PG_UP     &kp END     &none      &none
+    &none      &none       &none       &none      &none              &none              &none  &none  &none  &none  &none                &none         &none         &none       &none    &none
 )
 
 // MARK: Layer Template
