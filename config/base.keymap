@@ -326,7 +326,7 @@ ZMK_LAYER(base,
     &kp ESC     &kp Q             &hml LG(LCTRL) W      &hml LCTRL F   &kp P         &kp G                                                                                                         &kp J    &kp L         &hmr LCTRL U  &hmr LG(LCTRL) Y    &kp SEMI      &kp BSPC
     &kp TAB     &hml LCTRL A      &hml LALT R           &hml LGUI S    &hml LSHFT T  &kp D                                                                                                         &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I         &hmr LCTRL O  &kp SQT
     MAGIC_SHIFT &kp Z             &kp X                 &kp C          &kp V         &kp B   &sk LGUI          &sk LALT          &sk LCTRL           &sk LCTRL       &sk LALT        &sk LGUI      &kp K    &kp M         &kp COMMA     &kp DOT             &kp FSLH      MAGIC_SHIFT
-    &mo System  &kp LG(LA(BSLH))  &kp LG(SPACE)         &kp LEFT       &kp RIGHT             &sl Coding        &sk LSHFT         &kp LG(LCTRL)       &kp LG(LCTRL)   &sk LSHFT       &kp SPACE               &kp UP        &kp DOWN      &kp ENTER           &kp BSLH      &kp BSLH
+    &mo System  &kp LG(LA(BSLH))  &kp LA(SPACE)         &kp LEFT       &kp RIGHT             &sl Coding        &sk LSHFT         &kp LG(LCTRL)       &kp LG(LCTRL)   &sk LSHFT       &kp SPACE              &kp UP        &kp DOWN      &kp ENTER           &kp BSLH      &kp BSLH
 )
 
 ZMK_LAYER(symbols,
