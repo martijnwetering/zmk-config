@@ -188,10 +188,8 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 // Xcode
-ZMK_TAP_DANCE(xcode_quick,
-    bindings = <&kp LG(LS(o))>, <&kp LG(LS(a))>;
-    tapping-term-ms = <200>;
-)
+ZMK_TAP_DANCE(xcode_quick, bindings = <&kp LG(LS(O))>, <&kp LG(LS(A))>;
+    tapping-term-ms = <200>;)
 
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
