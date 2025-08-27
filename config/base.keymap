@@ -187,6 +187,12 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 // Sticky shift + leader.
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
+// Xcode
+ZMK_TAP_DANCE(xcode_quick,
+    bindings = <&kp LG(LS(o))>, <&kp LG(LS(a))>;
+    tapping-term-ms = <200>;
+)
+
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
 #define DSK_PREV  &hmr LCTRL LG(LC(LEFT)) // Previous desktop.
@@ -325,17 +331,17 @@ ZMK_LAYER(base,
     &kp GRAVE   &kp N1            &kp N2                &kp N3         &kp N4        &kp N5                                                                                                        &kp N6   &kp N7        &kp N8        &kp N9              &kp N0        &kp LBKT
     &kp ESC     &kp Q             &hml LG(LCTRL) W      &hml LCTRL F   &kp P         &kp G                                                                                                         &kp J    &kp L         &hmr LCTRL U  &hmr LG(LCTRL) Y    &kp SEMI      &kp BSPC
     &kp TAB     &hml LCTRL A      &hml LALT R           &hml LGUI S    &hml LSHFT T  &kp D                                                                                                         &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I         &hmr LCTRL O  &kp SQT
-    MAGIC_SHIFT &kp Z             &kp X                 &kp C          &kp V         &kp B   &sk LGUI          &sk LALT          &sk LCTRL           &sk LCTRL       &sk LALT        &sk LGUI      &kp K    &kp M         &kp COMMA     &kp DOT             &kp FSLH      MAGIC_SHIFT
-    &mo System  &kp LG(LA(BSLH))  &kp LA(SPACE)         &kp LEFT       &kp RIGHT             &sl Coding        &sk LSHFT         &kp LG(LCTRL)       &kp LG(LCTRL)   &sk LSHFT       &kp SPACE              &kp UP        &kp DOWN      &kp ENTER           &kp BSLH      &kp BSLH
+    &sk LSHFT   &kp Z             &kp X                 &kp C          &kp V         &kp B   &sl Symbols       &caps_word        CANCEL              CANCEL          SMART_NUM       &sl Symbols   &kp K    &kp M         &kp COMMA     &kp DOT             &kp FSLH      &sk RSHFT
+    &mo System  &kp LG(LA(BSLH))  &kp LA(SPACE)         &kp LEFT       &kp RIGHT             &kp TAB           &kp ESC           &kp LG(LCTRL)       &kp LG(LCTRL)   &xcode_quick    &kp SPACE              &kp UP        &kp DOWN      &kp ENTER           &kp BSLH      &kp BSLH
 )
 
 ZMK_LAYER(symbols,
-    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                             &none  &none  &none  &none  &none
-    &trans        &trans        &trans      &trans      &trans     &none                                                                              &none  &none  &none  &none  &none  &none
-    &trans        &kp LBRC      &kp AMPS    &kp STAR    &kp CARET  &kp RBRC                                                                           &none  &none  &none  &none  &none  &none
-    &trans        &kp GRAVE     &kp DLLR    &kp PRCNT   &kp EQUAL  &kp PLUS                                                                           &none  &none  &none  &none  &none  &none
-    &trans        &kp TILDE     &kp EXCL    &kp AT      &kp HASH   &kp PIPE   &kp MINUS          &kp UNDER          &trans  &trans  &trans  &trans    &none  &none  &none  &none  &none  &none
-    &none         &kp CARET     &kp INS     &kp LT      &kp GT                &kp LPAR           &kp RPAR           &trans  &trans  &trans  &trans           &none  &none  &none  &none  &none
+    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP                                                                                             &none      &none      &none     &none  &none
+    &trans        &trans        &trans      &trans      &trans     &none                                                                              &none  &none      &none      &none     &none  &none
+    &trans        &kp LBRC      &kp AMPS    &kp STAR    &kp CARET  &kp RBRC                                                                           &none  &none      &kp LPAR   &kp RPAR  &none  &none
+    &trans        &kp GRAVE     &kp DLLR    &kp PRCNT   &kp EQUAL  &kp PLUS                                                                           &none  &kp MINUS  &kp LBRC   &kp RBRC  &none  &none
+    &trans        &kp TILDE     &kp EXCL    &kp AT      &kp HASH   &kp PIPE   &kp MINUS          &kp UNDER          &trans  &trans  &trans  &trans    &none  &kp UNDER  &kp LBKT   &kp RBKT  &none  &none
+    &none         &kp CARET     &kp INS     &kp LT      &kp GT                &kp LPAR           &kp RPAR           &trans  &trans  &trans  &trans           &none      &none      &none     &none  &none
 )
 
 ZMK_LAYER(coding,
