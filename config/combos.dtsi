@@ -22,7 +22,7 @@
 // #define HRC_TAB    &hml         LS(LCTRL) TAB
 // #define HRC_REPEAT &hml_repeat  LS(LALT) 0
 
-ZMK_COMBO(esc, &kp ESC, LT2 LT3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(esc, &kp LA(SPACE), LT2 LT3, ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(tab, &kp TAB, RT2 RT3, ALL, COMBO_TERM_FAST)
 
 /* Horizontal combos - right hand */
