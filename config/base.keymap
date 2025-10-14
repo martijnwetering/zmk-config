@@ -113,20 +113,26 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
 // Tap: repeat after alpha, else sticky-shift |
 // Shift + tap/ double-tap: caps-word | Hold: shift.
-#define MAGIC_SHIFT &magic_shift LSHFT 0
-ZMK_HOLD_TAP(magic_shift, bindings = <&kp>, <&magic_shift_tap>;
-             flavor = "balanced"; tapping-term-ms = <200>;
-             quick-tap-ms = <QUICK_TAP_MS>;)
-ZMK_MOD_MORPH(magic_shift_tap, bindings = <&shift_repeat>, <&caps_word>;
-              mods = <(MOD_LSFT)>;)
-ZMK_ADAPTIVE_KEY(
-    shift_repeat, bindings = <&sk LSHFT>;
-    repeat {
-      trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
-      bindings = <&key_repeat>;
-      max-prior-idle-ms = <1200>;
-      strict-modifiers;
-    };)
+// #define MAGIC_SHIFT &magic_shift LSHFT 0
+// ZMK_HOLD_TAP(magic_shift, bindings = <&kp>, <&magic_shift_tap>;
+//              flavor = "balanced"; tapping-term-ms = <200>;
+//              quick-tap-ms = <QUICK_TAP_MS>;)
+// ZMK_MOD_MORPH(magic_shift_tap, bindings = <&shift_repeat>, <&caps_word>;
+//               mods = <(MOD_LSFT)>;)
+// ZMK_ADAPTIVE_KEY(
+//     shift_repeat, bindings = <&sk LSHFT>;
+//     repeat {
+//       trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+//       bindings = <&key_repeat>;
+//       max-prior-idle-ms = <1200>;
+//       strict-modifiers;
+//     };)
+
+ZMK_TAP_DANCE(td_shift,
+    tapping-term-ms = <200>;
+    bindings = <&sk LSHIFT>, <&caps_word>;
+)
+
 &caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
   /delete-property/ ignore-modifiers;
 };
@@ -337,7 +343,7 @@ ZMK_LAYER(base,
     &kp GRAVE   &kp N1            &kp N2                &kp N3         &kp N4        &kp N5                                                                                                                                    &kp N6   &kp N7        &kp N8        &kp N9              &kp N0        &kp LBKT
     &kp TAB     &kp Q             &hml LG(LCTRL) W      &hml LCTRL F   &kp P         &kp G                                                                                                                                     &kp J    &kp L         &hmr LCTRL U  &hmr LG(LCTRL) Y    &kp SEMI      &kp BSLH
     &kp ESC     &hml LCTRL A      &hml LALT R           &hml LGUI S    &hml LSHFT T  &kp D                                                                                                                                     &kp H    &hmr LSHFT N  &hmr LGUI E   &hmr LALT I         &hmr LCTRL O  &kp SQT
-    &sk LSHFT   &kp Z             &kp X                 &kp C          &kp V         &kp B   &sl LSHFT                     &caps_word        CANCEL              SMART_NUM       &xcode_quick    &sl RSHFT                     &kp K    &kp M         &kp COMMA     &kp DOT             &kp FSLH      &sk RSHFT
+    &sk LSHFT   &kp Z             &kp X                 &kp C          &kp V         &kp B   &td_shift                     &caps_word        CANCEL              SMART_NUM       &xcode_quick    &td_shift                     &kp K    &kp M         &kp COMMA     &kp DOT             &kp FSLH      &sk RSHFT
     &mo System  &kp LG(LA(BSLH))  &kp SEMI              &kp LEFT       &kp RIGHT             &thumb_layer Symbols BSPC     &kp TAB           &kp LG(LCTRL)       &kp LG(LCTRL)   &kp TAB         &thumb_layer Symbols SPACE             &kp UP        &kp DOWN      &kp ENTER           &kp BSLH      &kp LG(LS(BSLH))
 )
 
